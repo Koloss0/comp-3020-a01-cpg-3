@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus shuttle app</title>
+    <title>Campus Shuttle App</title>
+
+    <!-- Link your CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
+
 <body>
-   
+    <div class="top-bar">
+        <p>Campus Shuttle App</p>
+        <p>buttons over there are temporary proof of concept that we can have different screens -></p>
+        <div class="screen-selector">
+            <button data-target="searching-screen">Search</button>
+            <button data-target="route-selection-screen">Route</button>
+            <button data-target="navigation-screen">Navigate</button>
+        </div>
+    </div>
+
+    <div class="main" id="searching-screen">
+        <div class="searchArea">
+            <div>
+                <button class="search-input" id="searchBar">Choose your Destination</button>
+            </div>
+            <div class="button-row">
+                <button>Armes</button>
+                <button>Tier</button>
+                <button>SD Lot</button>
+                <button>ETIC 2</button>
+            </div>
+        </div>
+
+        <div class="sidebar hidden" id="sidebar">
+            <div>
+                <input type="text" class="search-input" placeholder="From Current Location" id="searchBarStart">
+            </div>
+            <div>
+                <input type="text" class="search-input" placeholder="Choose your Destination" id="searchBarDestination">
+            </div>
+            <div class="sidebar-container">
+                <div class="sidebar-container-title">Favourite Locations</div>
+                <button>Armes</button>
+                <button>Tier</button>
+                <button>SD Lot</button>
+                <button>EITC 2</button>
+            </div>
+        </div>
+
+        <!-- Map container for Leaflet -->
+        <div class="map-layer">
+            <div id="map" class="map"></div>
+        </div>
+
+    </div>
+    <div class="main" id="route-selection-screen" style="display:none;">
+        <p>Route Selection Screen</p>
+    </div>
+    <div class="main" id="navigation-screen" style="display:none;">
+        <p>Navigation Screen</p>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Your custom JS -->
+    <script src="script.js"></script>
 </body>
+
 </html>
