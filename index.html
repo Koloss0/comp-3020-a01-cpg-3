@@ -25,6 +25,7 @@
         </div>
     </div>
 
+
     <!-- SEARCHING SCREEN -->
     <div class="main" id="searching-screen">
         <div class="searchArea">
@@ -59,17 +60,80 @@
         <div class="map-layer">
             <div id="map" class="map"></div>
         </div>
-
     </div>
     
+
     <!-- ROUTE SELECTION SCREEN -->
     <div class="main" id="route-selection-screen" style="display:none;">
-        <p>Route Selection Screen</p>
+        <div class="searchArea">
+            <div>
+                <button class="search-input" id="searchBar">Choose your Destination</button>
+            </div>
+            <div class="button-row">
+                <button>Armes</button>
+                <button>Tier</button>
+                <button>SD Lot</button>
+                <button>ETIC 2</button>
+            </div>
+        </div>
+
+        <div class="sidebar hidden" id="sidebar">
+            <div>
+                <input type="text" class="search-input" placeholder="From Current Location" id="searchBarStart">
+            </div>
+            <div>
+                <input type="text" class="search-input" placeholder="Choose your Destination" id="searchBarDestination">
+            </div>
+            <div class="sidebar-container">
+                <div class="sidebar-container-title">Favourite Locations</div>
+                <button>Armes</button>
+                <button>Tier</button>
+                <button>SD Lot</button>
+                <button>EITC 2</button>
+            </div>
+        </div>
+
+        <!-- Map container for Leaflet -->
+        <div class="map-layer">
+            <div id="map" class="map"></div>
+        </div>
     </div>
 
+    
     <!-- NAVIGATION SCREEN -->
     <div class="main" id="navigation-screen" style="display:none;">
-        <p>Navigation Screen</p>
+        <div class="searchArea">
+            <div>
+                <button class="search-input" id="searchBar">Choose your Destination</button>
+            </div>
+            <div class="button-row">
+                <button>Armes</button>
+                <button>Tier</button>
+                <button>SD Lot</button>
+                <button>ETIC 2</button>
+            </div>
+        </div>
+
+        <div class="sidebar hidden" id="sidebar">
+            <div>
+                <input type="text" class="search-input" placeholder="From Current Location" id="searchBarStart">
+            </div>
+            <div>
+                <input type="text" class="search-input" placeholder="Choose your Destination" id="searchBarDestination">
+            </div>
+            <div class="sidebar-container">
+                <div class="sidebar-container-title">Favourite Locations</div>
+                <button>Armes</button>
+                <button>Tier</button>
+                <button>SD Lot</button>
+                <button>EITC 2</button>
+            </div>
+        </div>
+
+        <!-- Map container for Leaflet -->
+        <div class="map-layer">
+            <div id="map" class="map"></div>
+        </div>
     </div>
 
     <!-- Leaflet JS -->
