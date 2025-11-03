@@ -1,0 +1,166 @@
+/* Reset and basic layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top search bar */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    background-color: rgb(122, 126, 152);
+
+    padding: 0 20px;
+}
+
+.searchArea {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 30%;
+    min-width: 400px;
+    background-color: rgba(193, 193, 193, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+}
+
+.searchArea>div {
+    width: 100%;
+    /* child fills parent width */
+}
+
+.search-input {
+    width: 100%;
+    /* full width of parent div */
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: rgb(234, 234, 234);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+button.search-input {
+    text-align: left;
+    padding-left: 13px;
+}
+
+.button-row {
+    display: flex;
+    /* enable horizontal layout */
+    justify-content: space-between;
+    /* spread buttons evenly */
+    gap: 6px;
+    /* optional spacing between buttons */
+    width: 100%;
+    /* fill parent width */
+}
+
+.button-row button {
+    flex: 1;
+    height: 30px;
+    /* all buttons take equal width */
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-row button:hover {
+    background-color: #357ab8;
+}
+
+/* Main container: sidebar + map */
+.main {
+    position: relative;
+
+    /* adjust for top bar, remove if topbar is removed*/
+    height: calc(100vh - 60px);
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    min-width: 400px;
+    background-color: rgba(193, 193, 193, 0.7);
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+}
+
+.sidebar.hidden {
+    visibility: hidden;
+}
+
+.sidebar-container {
+    margin-top: 10px;
+    /*background-color: rgba(66, 50, 238, 0.5);*/
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    gap: 5px;
+}
+
+.sidebar-container-title {
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
+    padding: 10px;
+    background-color: #c9c9c9;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Sidebar items */
+.sidebar-container button {
+    padding: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-container button:hover {
+    background-color: #dcdcdc;
+}
+
+/*
+Map-Layer exists so that the map cannot appear on top of other elements. 
+Leaflet automatically tries to place the map overtop all of its siblings, 
+so it must be seperated by all other elements in main by 1 layer so it does 
+not try to appear on top of them
+*/
+.map-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+#map {
+    position: absolute;
+    inset: 0;
+}
