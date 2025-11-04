@@ -44,12 +44,17 @@ body {
     width: 100%;
     /* full width of parent div */
     padding: 10px 15px;
+    padding-left: 35px; 
+    height: 35px;
+    width: 250px;
     border-radius: 6px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     background-color: rgb(234, 234, 234);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     color: black;
+
+   
 }
 
 button.search-input {
@@ -183,4 +188,17 @@ not try to appear on top of them
 #map {
     position: absolute;
     inset: 0;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.location-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px; /* change size here */
 }
