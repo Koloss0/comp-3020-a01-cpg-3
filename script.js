@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.add('hidden');
     });
 
-    const screenbuttons = document.querySelectorAll('.screen-selector button');
+    const screenbuttons = document.querySelectorAll('button.screen-selector');
     const screens = ['searching-screen', 'route-selection-screen', 'navigation-screen'];
-
+    console.log(screenbuttons);
     screenbuttons.forEach(btn => {
         btn.addEventListener('click', () => {
             const target = btn.getAttribute('data-target');
