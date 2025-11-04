@@ -184,3 +184,108 @@ not try to appear on top of them
     position: absolute;
     inset: 0;
 }
+
+/* Your existing sidebar styles assumed here */
+
+/* Route card container */
+.route-card {
+    background: #fff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Header row: icon, title, time */
+.route-header {
+    display: grid;
+    grid-template-columns: 24px 1fr auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.route-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.9;
+}
+
+.route-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.route-time {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb; /* Muted blue highlight */
+}
+
+/* Timeline */
+.route-timeline {
+    margin-left: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+
+/* Each step */
+.timeline-step {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.step-label {
+    font-size: 13px;
+    margin-left: 10px;
+    color: #444;
+}
+
+/* Dot */
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #2563eb;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Connector line */
+.connector {
+    width: 2px;
+    height: 14px;
+    background: #2563eb;
+    margin-left: 3px;
+}
+
+.route-note {
+    display: flex;
+    align-items: center;    /* <-- center icon and text vertically */
+    gap: 6px;               /* slightly larger gap looks nicer with centered items */
+    padding: 4px 6px;
+    background: rgba(0, 0, 0, 0.04);
+    border-left: 3px solid #2563eb;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.35;      /* keeps multi-line text spacing consistent */
+}
+
+.route-note .info-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.85;
+    flex-shrink: 0;
+    margin-top: 0;          /* remove previous nudging */
+    display: block;         /* ensures consistent sizing/box model */
+    vertical-align: middle; /* defensive — useful if icon becomes inline later */
+}
+
+
+.route-note .note-text {
+    line-height: 1.35;
+}
