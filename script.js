@@ -4,7 +4,7 @@ const MAP_HEIGHT = 1338;
 // ---------------- Sidebar toggle ----------------
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.getElementById('sidebar');
+    /*
     const searchBar = document.getElementById('searchBar');
     const map = document.getElementById('map');
 
@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     map.addEventListener('click', () => {
         sidebar.classList.add('hidden');
     });
+
+    const sidebars = document.querySelectorAll('.sidebar');
+    sidebars.forEach(sidebar => {
+        sidebar.
+    });
+    */
 
     const screenbuttons = document.querySelectorAll('button.screen-selector');
     const screens = ['searching-screen', 'route-selection-screen', 'navigation-screen'];
