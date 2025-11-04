@@ -15,30 +15,30 @@
 </head>
 
 <body>
-    <div class="top-bar">
-        <p>Campus Shuttle App</p>
-        <p>buttons over there are temporary proof of concept that we can have different screens -></p>
-        <div class="screen-selector">
-            <button data-target="searching-screen">Search</button>
-            <button data-target="route-selection-screen">Route</button>
-            <button data-target="navigation-screen">Navigate</button>
-        </div>
-    </div>
 
+    <!-- SEARCHING SCREEN -->
     <div class="main" id="searching-screen">
         <div class="searchArea">
             <div>
                 <button class="search-input" id="searchBar">Choose your Destination</button>
             </div>
             <div class="button-row">
-                <button>Armes</button>
+                <button class="screen-selector" data-target="route-selection-screen">ALC</button>
                 <button>Tier</button>
                 <button>SD Lot</button>
                 <button>ETIC 2</button>
             </div>
         </div>
 
-        <div class="sidebar hidden" id="sidebar">
+        <!-- Map container for Leaflet -->
+        <div class="map-layer">
+            <div id="map" class="map"></div>
+        </div>
+    </div>
+    
+    <!-- ROUTE SELECTION SCREEN -->
+    <div class="main" id="route-selection-screen" style="display:none;">
+        <div class="sidebar">
             <div>
                 <input type="text" class="search-input" placeholder="From Current Location" id="searchBarStart">
             </div>
@@ -47,10 +47,33 @@
             </div>
             <div class="sidebar-container">
                 <div class="sidebar-container-title">Favourite Locations</div>
-                <button>Armes</button>
+                <button>ALC</button>
                 <button>Tier</button>
                 <button>SD Lot</button>
                 <button>EITC 2</button>
+            </div>
+        </div>
+
+        <!-- Start button -->
+        <button class="start-button screen-selector" id="start-button" data-target="navigation-screen">Start</button>
+
+        <!-- Map container for Leaflet -->
+        <div class="map-layer">
+            <div id="map" class="map"></div>
+        </div>
+    </div>
+
+
+    <!-- NAVIGATION SCREEN -->
+    <div class="main" id="navigation-screen" style="display:none;">
+        <div class="sidebar">
+            <div class="navigation-instructions">
+                <h2>Navigation Instructions</h2>
+                <ol>
+                    <li>Head north on Main St.</li>
+                    <li>Turn right onto 1st Ave.</li>
+                    <li>Your destination will be on the left.</li>
+                </ol>
             </div>
         </div>
 
@@ -58,13 +81,6 @@
         <div class="map-layer">
             <div id="map" class="map"></div>
         </div>
-
-    </div>
-    <div class="main" id="route-selection-screen" style="display:none;">
-        <p>Route Selection Screen</p>
-    </div>
-    <div class="main" id="navigation-screen" style="display:none;">
-        <p>Navigation Screen</p>
     </div>
 
     <!-- Leaflet JS -->

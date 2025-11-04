@@ -4,36 +4,9 @@ const MAP_HEIGHT = 1338;
 // ---------------- Sidebar toggle ----------------
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.getElementById('sidebar');
-    const searchBar = document.getElementById('searchBar');
-    const map = document.getElementById('map');
-
-
-    if (!searchBar) {
-        console.error('search bar not found!');
-        return;
-    }
-    if (!sidebar) {
-        console.error('Sidebar not found!');
-        return;
-    }
-    if (!map) {
-        console.error('Map not found!');
-        return;
-    }
-
-    // Show sidebar when the search bar is focused
-    searchBar.addEventListener('focus', () => {
-        sidebar.classList.remove('hidden');
-    });
-
-    map.addEventListener('click', () => {
-        sidebar.classList.add('hidden');
-    });
-
-    const screenbuttons = document.querySelectorAll('.screen-selector button');
+    const screenbuttons = document.querySelectorAll('button.screen-selector');
     const screens = ['searching-screen', 'route-selection-screen', 'navigation-screen'];
-
+    console.log(screenbuttons);
     screenbuttons.forEach(btn => {
         btn.addEventListener('click', () => {
             const target = btn.getAttribute('data-target');

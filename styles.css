@@ -85,6 +85,26 @@ button.search-input {
     background-color: #357ab8;
 }
 
+.start-button {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 40px;
+    font-size: 18px;
+    color: white;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: #4a90e2;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover {
+    background-color: #357ab8;
+}
+
 /* Main container: sidebar + map */
 .main {
     position: relative;
