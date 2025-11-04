@@ -95,14 +95,34 @@ button.search-input {
     color: white;
     border-radius: 25px;
     border: 1px solid #ccc;
-    background-color: #4a90e2;
+    background-color: #39d331;
     z-index: 1000;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .start-button:hover {
-    background-color: #357ab8;
+    background-color: #259b1f;
+}
+
+.exit-button {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 30px;
+    font-size: 18px;
+    color: white;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: #e74c3c;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.exit-button:hover {
+    background-color: #c0392b;
 }
 
 /* Main container: sidebar + map */
@@ -122,7 +142,7 @@ button.search-input {
     bottom: 0;
     width: 30%;
     min-width: 400px;
-    background-color: rgba(193, 193, 193, 0.7);
+    background-color: #ffffff;
     padding: 15px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
@@ -146,11 +166,13 @@ button.search-input {
 }
 
 .sidebar-container-title {
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    background-color: #c9c9c9;
+    background-color: #4a90e2;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-weight: bold;
+    color: white;
 }
 
 /* Sidebar items */
@@ -232,6 +254,16 @@ not try to appear on top of them
     position: relative;
 }
 
+.route-timeline-large {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
 /* Each step */
 .timeline-step {
     display: flex;
@@ -245,6 +277,12 @@ not try to appear on top of them
     color: #444;
 }
 
+.step-label-large {
+    font-size: 16px;
+    margin-left: 15px;
+    color: #444;
+}
+
 /* Dot */
 .dot {
     width: 8px;
@@ -254,12 +292,27 @@ not try to appear on top of them
     flex-shrink: 0;
 }
 
+.dot-large {
+    width: 12px;
+    height: 12px;
+    background: #2563eb;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
 /* Connector line */
 .connector {
-    width: 2px;
+    width: 3px;
     height: 14px;
     background: #2563eb;
     margin-left: 3px;
+}
+
+.connector-large {
+    width: 2px;
+    height: 18px;
+    background: #2563eb;
+    margin-left: 4.5px;
 }
 
 .route-note {
@@ -287,5 +340,34 @@ not try to appear on top of them
 
 
 .route-note .note-text {
+    line-height: 1.35;
+}
+
+/* Large route note for sidebar */
+
+.route-note-large {
+    display: flex;
+    align-items: center;    /* <-- center icon and text vertically */
+    gap: 8px;               /* slightly larger gap looks nicer with centered items */
+    padding: 6px 8px;
+    background: rgba(0, 0, 0, 0.04);
+    border-left: 4px solid #2563eb;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.35;      /* keeps multi-line text spacing consistent */
+}
+
+.route-note-large .info-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.85;
+    flex-shrink: 0;
+    margin-top: 0;          /* remove previous nudging */
+    display: block;         /* ensures consistent sizing/box model */
+    vertical-align: middle; /* defensive — useful if icon becomes inline later */
+}
+
+.route-note-large .note-text {
     line-height: 1.35;
 }

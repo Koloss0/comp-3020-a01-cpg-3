@@ -140,13 +140,37 @@
     <!-- NAVIGATION SCREEN -->
     <div class="main" id="navigation-screen" style="display:none;">
         <div class="sidebar">
-            <div class="navigation-instructions">
-                <h2>Navigation Instructions</h2>
-                <ol>
-                    <li>Head north on Main St.</li>
-                    <li>Turn right onto 1st Ave.</li>
-                    <li>Your destination will be on the left.</li>
-                </ol>
+            <div class="sidebar-container-title">Taking Shuttle to ALC</div>
+            <div class="route-timeline-large">
+                <div class="timeline-step">
+                    <div class="dot-large"></div>
+                    <div class="step-label-large">Board shuttle at Stop A</div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="connector-large"></div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="dot-large"></div>
+                    <div class="step-label-large">Arrive at Stop B</div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="connector-large"></div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="dot-large"></div>
+                    <div class="step-label-large">Walk southeast on University Crescent</div>
+                </div>
+            </div>
+
+            <div class="route-note-large">
+                <img src="icons/info.svg" alt="Info" class="info-icon">
+                <span class="note-text">
+                    Destination will be on the left.
+                </span>
             </div>
         </div>
 
@@ -154,6 +178,9 @@
         <div class="map-layer">
             <div id="map" class="map"></div>
         </div>
+
+        <!-- Exit button -->
+        <button class="exit-button screen-selector" id="exit-button" data-target="searching-screen">Exit Navigation</button>
     </div>
 
     <!-- Leaflet JS -->
