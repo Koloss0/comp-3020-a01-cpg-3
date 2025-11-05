@@ -371,3 +371,22 @@ not try to appear on top of them
 .route-note-large .note-text {
     line-height: 1.35;
 }
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.location-icon {
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    opacity: 1.0;
+    mix-blend-mode: multiply;
+}
+
+.search-input{
+    padding-left: 40px; /* Adjust based on icon size + desired spacing */
+}
