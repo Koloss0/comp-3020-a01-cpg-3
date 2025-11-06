@@ -203,3 +203,26 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
+
+// ---------------- Not Implemented Message ----------------
+// Toast to show 'not implemented' message
+function showNotImplementedMessage(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const unimplemented = document.querySelectorAll('[not-implemented]');
+
+  unimplemented.forEach(e => {
+    e.addEventListener('click', event => {
+      event.preventDefault();
+      showNotImplementedMessage("Feature not implemented.");
+    });
+  });
+});
