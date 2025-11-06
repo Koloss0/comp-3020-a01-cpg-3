@@ -79,8 +79,17 @@ button.search-input {
     color: white;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
-
+.button-row .icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
 .button-row button:hover {
     background-color: #357ab8;
 }
