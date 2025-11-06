@@ -190,6 +190,63 @@ button.search-input {
     background-color: #dcdcdc;
 }
 
+/* Prefer Indoor Routes toggle button */
+.toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-indoor-routes {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-indoor-routes input {
+    display: none;
+}
+
+.toggle-indoor-routes-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(193, 193, 193, 0.5);
+    transition: 0.5s;
+    border-radius: 30px;
+}
+
+.toggle-indoor-routes-slider:before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-indoor-routes-slider {
+    background-color: #4a90e2;
+}
+
+input:checked + .toggle-indoor-routes-slider::before {
+    transform: translateX(30px);
+}
+
 /*
 Map-Layer exists so that the map cannot appear on top of other elements. 
 Leaflet automatically tries to place the map overtop all of its siblings, 
