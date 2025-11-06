@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="53.93837mm"
+   height="63.678825mm"
+   viewBox="0 0 53.93837 63.678825"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter8"
+       x="-0.28448686"
+       y="-0.23784528"
+       width="1.6293666"
+       height="1.526185">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         id="feFlood7" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="5.000000"
+         id="feGaussianBlur7" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="3.000000"
+         dy="3.000000"
+         id="feOffset7" />
+      <feComposite
+         result="comp1"
+         operator="in"
+         in="flood"
+         in2="offset"
+         id="feComposite7" />
+      <feComposite
+         result="comp2"
+         operator="over"
+         in="SourceGraphic"
+         in2="comp1"
+         id="feComposite8" />
+    </filter>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-61.051903,-110.96251)">
+    <g
+       id="g7"
+       style="filter:url(#filter8)">
+      <g
+         id="g2">
+        <path
+           style="fill:#ea1717;fill-opacity:1;stroke:none;stroke-width:0.653215;stroke-linecap:round"
+           d="m 88.021093,113.09418 v 48.60988 l -24.837375,10.80547 z"
+           id="path1" />
+        <path
+           style="fill:#ef6d41;fill-opacity:1;stroke:none;stroke-width:0.653215;stroke-linecap:round"
+           d="m 88.021093,113.09418 v 48.60988 l 24.837367,10.80547 z"
+           id="path2" />
+      </g>
+      <path
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4.264;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 63.183716,172.50953 88.021093,113.09418 112.85846,172.50953 88.021093,161.70406 Z"
+         id="path3" />
+    </g>
+  </g>
+</svg>
