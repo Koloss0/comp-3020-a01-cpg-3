@@ -20,16 +20,16 @@
     <div class="main" id="searching-screen">
         <div class="searchArea">
             <div>
-                <button class="search-input" id="searchBar">Choose your Destination</button>
+                <button not-implemented class="search-input" id="searchBar">Choose your Destination</button>
             </div>
             <div class="button-row">
                 <button class="screen-selector" data-target="route-selection-screen">
                     <img src="icons/star.svg" alt="icon" class="icon"> ALC</button>
-                <button>
+                <button not-implemented>
                     <img src="icons/star.svg" alt="icon" class="icon"> Tier</button>
-                <button>
+                <button not-implemented>
                     <img src="icons/star.svg" alt="icon" class="icon"> SD Lot</button>
-                <button>
+                <button not-implemented>
                     <img src="icons/star.svg" alt="icon" class="icon"> ETIC 2</button>
             </div>
         </div>
@@ -48,10 +48,10 @@
             </div>
             <div class="sidebar-container">
                 <div class="sidebar-container-title">Favourite Locations</div>
-                <button>ALC</button>
-                <button>Tier</button>
-                <button>SD Lot</button>
-                <button>EITC 2</button>
+                <button not-implemented>ALC</button>
+                <button not-implemented>Tier</button>
+                <button not-implemented>SD Lot</button>
+                <button not-implemented>EITC 2</button>
             </div>
 
             <div class="toggle-row">
@@ -64,7 +64,7 @@
 
             <div class="sidebar-container">
                 <div class="sidebar-container-title">Route Descriptions</div>
-                <div class="route-card">
+                <div not-implemented class="route-card">
                     <div class="route-header">
                         <img src="icons/shuttle.svg" alt="Shuttle" class="route-icon">
                         <div class="route-title">Shuttle to ALC</div>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
 
-                <div class="route-card">
+                <div not-implemented class="route-card">
                     <div class="route-header">
                         <img src="icons/walk.svg" alt="Walk" class="route-icon">
                         <div class="route-title">Walk to ALC</div>
@@ -191,6 +191,9 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- allows us to print 'feature not implemented' messages to user in prototype phase-->
+    <div id="toast" class="toast"></div>
 
     <!-- Your custom JS -->
     <script src="script.js"></script>
