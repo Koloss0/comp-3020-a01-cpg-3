@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-
 });
 
 // ---------------- Leaflet map ----------------
@@ -64,47 +62,3 @@ locations.forEach(loc => {
         .addTo(map)
         .bindPopup(loc.name);
 });
-
-// ---------------- Adjust minZoom to fully fill screen ----------------
-function updateMinZoom() {
-    const mapSize = map.getSize();
-    const zoomX = mapSize.x / width;
-    const zoomY = mapSize.y / height;
-    const scale = Math.min(zoomX, zoomY);
-
-    // Compute theoretical zoom, then clamp it between your allowed min/max
-    const computedZoom = map.getScaleZoom(scale);
-
-    // Clamp zoom so it doesn’t go beyond the valid range
-    const minZoom = Math.max(computedZoom, 0);
-    const maxZoom = 2;
-
-    map.setMinZoom(minZoom);
-    map.setMaxZoom(maxZoom);
-
-    // Keep the view fitting within bounds
-    map.fitBounds(bounds);
-
-    // Optional: stay slightly zoomed in for aesthetics
-    map.setZoom(minZoom + 1);
-}
-
-
-// every time the screen changes size or is reloaded, the map must recalculate its max and min sizes
-window.addEventListener('load', () => {
-    map.invalidateSize();
-});
-let resizeTimer;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-        map.invalidateSize();
-    }, 150); // only fires 150ms after resizing stops
-});
-
-// Run once after map loads
-updateMinZoom();
-
-// Optional: adjust on window resize
-window.addEventListener('resize', updateMinZoom);
-
