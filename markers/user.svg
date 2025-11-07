@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="53.93837mm"
-   height="63.678825mm"
-   viewBox="0 0 53.93837 63.678825"
+   width="56.336277mm"
+   height="66.077492mm"
+   viewBox="0 0 56.336277 66.077492"
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
@@ -14,10 +14,10 @@
     <filter
        style="color-interpolation-filters:sRGB"
        id="filter8"
-       x="-0.28448686"
-       y="-0.23784528"
-       width="1.6293666"
-       height="1.526185">
+       x="-0.24469142"
+       y="-0.20728908"
+       width="1.5450009"
+       height="1.4616627">
       <feFlood
          result="flood"
          in="SourceGraphic"
@@ -51,7 +51,7 @@
   </defs>
   <g
      id="layer1"
-     transform="translate(-61.051903,-110.96251)">
+     transform="translate(-59.853342,-109.76289)">
     <g
        id="g7"
        style="filter:url(#filter8)">
@@ -67,8 +67,8 @@
            id="path2" />
       </g>
       <path
-         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4.264;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 63.183716,172.50953 88.021093,113.09418 112.85846,172.50953 88.021093,161.70406 Z"
+         style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;fill:#ffffff;stroke:#000000;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+         d="m 88.021484,110.96289 a 2.1322132,2.1322132 0 0 0 -1.966797,1.30859 l -24.83789,59.41602 a 2.1322132,2.1322132 0 0 0 2.818359,2.77734 l 23.986328,-10.43554 23.986326,10.43554 a 2.1322132,2.1322132 0 0 0 2.81836,-2.77734 L 89.988281,112.27148 a 2.1322132,2.1322132 0 0 0 -1.966797,-1.30859 z m 0,7.6582 L 108.8457,168.43945 88.871094,159.75 a 2.1322132,2.1322132 0 0 0 -1.701172,0 l -19.97461,8.68945 z"
          id="path3" />
     </g>
   </g>

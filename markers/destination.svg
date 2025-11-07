@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="26.606524mm"
+   height="37.520374mm"
+   viewBox="0 0 26.606524 37.520374"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="drawing-1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.0485265"
+     inkscape:cx="345.61428"
+     inkscape:cy="431.28562"
+     inkscape:window-width="2304"
+     inkscape:window-height="1190"
+     inkscape:window-x="2293"
+     inkscape:window-y="132"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false">
+    <inkscape:page
+       x="0"
+       y="8.9865249e-15"
+       width="26.606524"
+       height="37.52037"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-91.69673,-107.39477)">
+    <path
+       id="path3"
+       style="fill:#ef6d41;stroke-width:2.764;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.764, 8.29199"
+       d="m 91.69674,120.69804 c 0,7.34719 11.06603,14.66259 13.62615,24.2171 2.57362,-9.60486 12.98037,-16.86991 12.98037,-24.2171 1e-5,-7.34719 -5.95607,-13.30327 -13.30326,-13.30327 -7.34719,0 -13.30326,5.95608 -13.30326,13.30327 z"
+       sodipodi:nodetypes="scsss" />
+    <circle
+       style="fill:#803300;fill-opacity:1;stroke:none;stroke-width:2.764;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.764, 8.29197;stroke-dashoffset:0"
+       id="path4"
+       cx="105"
+       cy="120.18819"
+       r="7.0479193" />
+  </g>
+</svg>
