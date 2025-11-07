@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="47.299042mm"
+   height="59.127167mm"
+   viewBox="0 0 47.299042 59.127167"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1"><rect
+       x="306.56183"
+       y="379.29703"
+       width="104.46533"
+       height="37.587994"
+       id="rect2" /></defs><g
+     id="layer1"
+     transform="translate(-71.332018,-73.341196)"><path
+       id="path1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="m 94.981799,74.341199 a 22.649446,22.649446 0 0 0 -22.64978,22.64978 22.649446,22.649446 0 0 0 15.065747,21.341851 l 7.584033,13.13563 7.583521,-13.13563 A 22.649446,22.649446 0 0 0 117.63106,96.990979 22.649446,22.649446 0 0 0 94.981799,74.341199 Z" /><text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,0.64311295,2.6458334)"
+       id="text2"
+       style="font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:none;stroke:#000000;stroke-width:7.55906;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"><tspan
+         x="306.5625"
+         y="408.12102"
+         id="tspan3"><tspan
+           style="font-weight:bold;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none"
+           id="tspan1">11 min</tspan></tspan></text><g
+       style="fill:#000000;stroke-width:0.25654"
+       id="g3"
+       transform="matrix(0.02578387,0,0,0.02578387,82.605281,104.18136)"><path
+         d="m 240,-120 q -17,0 -28.5,-11.5 Q 200,-143 200,-160 v -82 q -18,-20 -29,-44.5 -11,-24.5 -11,-53.5 v -380 q 0,-83 77,-121.5 77,-38.5 243,-38.5 172,0 246,37 74,37 74,123 v 380 q 0,29 -11,53.5 -11,24.5 -29,44.5 v 82 q 0,17 -11.5,28.5 Q 737,-120 720,-120 h -40 q -17,0 -28.5,-11.5 Q 640,-143 640,-160 v -40 H 320 v 40 q 0,17 -11.5,28.5 Q 297,-120 280,-120 Z M 482,-760 H 706 258 Z m 158,280 H 240 720 Z M 240,-560 H 720 V -680 H 240 Z m 100,240 q 25,0 42.5,-17.5 Q 400,-355 400,-380 400,-405 382.5,-422.5 365,-440 340,-440 q -25,0 -42.5,17.5 -17.5,17.5 -17.5,42.5 0,25 17.5,42.5 17.5,17.5 42.5,17.5 z m 280,0 q 25,0 42.5,-17.5 Q 680,-355 680,-380 680,-405 662.5,-422.5 645,-440 620,-440 q -25,0 -42.5,17.5 -17.5,17.5 -17.5,42.5 0,25 17.5,42.5 Q 595,-320 620,-320 Z M 258,-760 H 706 Q 691,-777 641.5,-788.5 592,-800 482,-800 375,-800 325.5,-787.5 276,-775 258,-760 Z m 62,480 h 320 q 33,0 56.5,-23.5 Q 720,-327 720,-360 V -480 H 240 v 120 q 0,33 23.5,56.5 23.5,23.5 56.5,23.5 z"
+         id="path1-5"
+         style="stroke-width:0.25654" /></g></g></svg>
