@@ -1,3 +1,11 @@
+const USER_LATITUDE = 49.8052;
+const USER_LONGITUDE = -97.1480;
+
+// ---------------- FlyTo Locations ----------------
+// We need to offset the bounds slightly to account for UI elements covering parts of the map
+const userLocation = L.latLng(USER_LATITUDE, USER_LONGITUDE - 0.000625);
+const routeSelectionCenter = L.latLng(49.8048, -97.146200  - 0.0025);
+
 // ---------------- Bus Route coordinates ----------------
 const busRoute = [
   [49.805003, -97.148520],
@@ -15,8 +23,8 @@ const busRoute = [
 ];
 
 const pathToStopA = [
-  [49.805003, -97.148520],
-  [49.8052, -97.1480]
+  [USER_LATITUDE, USER_LONGITUDE],
+  [49.805003, -97.148520]
 ];
 
 const pathToALC = [
@@ -26,7 +34,7 @@ const pathToALC = [
 
 // ---------------- Walking Route coordinates ----------------
 const walkingRoute = [
-    [49.8052, -97.1480],
+    [USER_LATITUDE, USER_LONGITUDE],
     [49.805519, -97.147355],
     [49.805058, -97.146979],
     [49.807464, -97.139713],
@@ -178,6 +186,12 @@ function showScreen(screenId) {
     layers.forEach(layer => {
         layer.addTo(map);
     });
+    
+    if (screenId === 'route-selection-screen') {
+        map.flyTo(routeSelectionCenter, 16);
+    } else if (screenId === 'navigation-screen') {
+        map.flyTo(userLocation, 18);
+    }
 }
 
 // Wait for the DOM to load

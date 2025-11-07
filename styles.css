@@ -35,6 +35,7 @@ body {
     z-index: 1;
 }
 
+
 .searchArea>div {
     width: 100%;
     /* child fills parent width */
