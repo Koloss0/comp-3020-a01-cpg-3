@@ -95,14 +95,14 @@ const pathToALCFill = L.polyline(pathToALC, {
 // Bus route polyline
 const busRoutePolylineOutline1 = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
     color: 'black',       // line color
-    weight: 13,           // line thickness
+    weight: 16,           // line thickness
     opacity: 1,        // transparency
     smoothFactor: 1
 });
 
 const busRoutePolylineOutline2 = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
     color: 'white',       // line color
-    weight: 10,           // line thickness
+    weight: 11,           // line thickness
     opacity: 1,        // transparency
     smoothFactor: 1
 });
@@ -140,15 +140,15 @@ const pinMarker = L.marker([49.806371, -97.138765], { icon: pinIcon });
 
 const walkingETAIcon = L.icon({
     iconUrl: 'markers/walking_eta.svg',
-    iconSize: [50, 50], // size of the icon in pixels
-    iconAnchor: [25, 50], // point of the icon which corresponds to the marker's location
+    iconSize: [64, 64], // size of the icon in pixels
+    iconAnchor: [32, 64], // point of the icon which corresponds to the marker's location
 });
 const walkingETAMarker = L.marker([49.806313, -97.143343], { icon: walkingETAIcon });
 
 const busETAIcon = L.icon({
     iconUrl: 'markers/bus_eta.svg',
-    iconSize: [50, 50], // size of the icon in pixels
-    iconAnchor: [25, 50], // point of the icon which corresponds to the marker's location
+    iconSize: [64, 64], // size of the icon in pixels
+    iconAnchor: [32, 64], // point of the icon which corresponds to the marker's location
 });
 const busETAMarker = L.marker([49.804038, -97.144554], { icon: busETAIcon });
 
