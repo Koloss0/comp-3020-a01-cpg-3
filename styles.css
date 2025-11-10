@@ -478,9 +478,9 @@ not try to appear on top of them
 }
 
 .settings-icon {
-  width: 48px;
-  height: 22px;
-  margin-left: 8px;
+  width: 55px;
+  height: 44px;
+  margin-left: -53px;
   cursor: pointer;
   opacity: 0.8;
   transition: transform 0.2s ease, opacity 0.2s ease;
