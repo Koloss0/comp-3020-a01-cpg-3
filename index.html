@@ -19,21 +19,23 @@
     <!-- SEARCHING SCREEN -->
     <div class="main" id="searching-screen">
         <div class="searchArea">
-            <div>
-                <button not-implemented class="search-input" id="searchBar">Where to?</button>
+            <div class="search-container">
+                <input type="text" placeholder="Where to?" readonly not-implemented>
+                <img src="icons/search.svg" alt="Search" class="search-icon">
             </div>
+
             <div class="button-row">
                 <button class="screen-selector" data-target="route-selection-screen">
-                    <img src="icons/star.svg" alt="icon" class="icon"> ALC
+                    <img src="icons/star.svg" alt="icon" class="icon">ALC
                 </button>
                 <button not-implemented>
-                    <img src="icons/star.svg" alt="icon" class="icon"> Tier
+                    <img src="icons/star.svg" alt="icon" class="icon">Tier
                 </button>
                 <button not-implemented>
-                    <img src="icons/star.svg" alt="icon" class="icon"> SD Lot
+                    <img src="icons/star.svg" alt="icon" class="icon">SD Lot
                 </button>
                 <button not-implemented>
-                    <img src="icons/star.svg" alt="icon" class="icon"> ETIC 2
+                    <img src="icons/star.svg" alt="icon" class="icon">ETIC 2
                 </button>
             </div>
         </div>
@@ -42,13 +44,13 @@
     <!-- ROUTE SELECTION SCREEN -->
     <div class="main" id="route-selection-screen" style="display:none;">
         <div class="sidebar">
-            <div class = "input-wrapper">
-                <img src="icons/current-location.jpeg"  class="location-icon">
-                <input type="text" class="search-input" placeholder="Current Location" id="searchBarStart">
+            <div class="search-container">
+                <input type="text" value="Your Location" readonly not-implemented>
+                <img src="icons/location_searching.svg" alt="Search" class="search-icon">
             </div>
-            <div class = "input-wrapper">
-                <img src="icons/destination.jpeg"  class="location-icon">
-                <input type="text" class="search-input" id="searchBarDestination" placeholder="Active Living Centre">
+            <div class="search-container">
+                <input type="text" value="Active Living Centre" readonly not-implemented>
+                <img src="icons/location.svg" alt="Search" class="search-icon">
             </div>
 
             <div class="toggle-row">
@@ -61,44 +63,41 @@
 
             <div class="sidebar-container">
                 <div class="sidebar-container-title">Route Descriptions</div>
-                <div not-implemented class="route-card">
+                <div not-implemented class="route-card selected-route-card">
                     <div class="route-header">
                         <img src="icons/shuttle.svg" alt="Shuttle" class="route-icon">
                         <div class="route-title">Shuttle to ALC</div>
-                        <div class="route-time">11 min</div>
+                        <div class="route-time bus-font-colour">11 min</div>
                     </div>
 
                     <div class="route-timeline">
                         <div class="timeline-step">
-                            <div class="dot"></div>
+                            <div class="dot bus-bg-colour"></div>
                             <div class="step-label">Board shuttle at Stop A</div>
                         </div>
 
                         <div class="timeline-step">
-                            <div class="connector"></div>
+                            <div class="connector bus-bg-colour"></div>
                         </div>
 
                         <div class="timeline-step">
-                            <div class="dot"></div>
+                            <div class="dot bus-bg-colour"></div>
                             <div class="step-label">Arrive at Stop B</div>
                         </div>
 
                         <div class="timeline-step">
-                            <div class="connector"></div>
+                            <div class="connector bus-bg-colour"></div>
                         </div>
 
                         <div class="timeline-step">
-                            <div class="dot"></div>
+                            <div class="dot bus-bg-colour"></div>
                             <div class="step-label">Walk southeast on University Crescent</div>
                         </div>
                     </div>
 
-                    <div class="route-note">
-                        <img src="icons/info.svg" alt="Info" class="info-icon">
-                        <span class="note-text">
-                            Destination will be on the left.
-                        </span>
-                    </div>
+                    <span class="route-card-note bus-bg-colour">
+                        Fastest route
+                    </span>
                 </div>
 
                 <div not-implemented class="route-card">
@@ -123,19 +122,12 @@
                             <div class="step-label">Turn right onto University Crescent</div>
                         </div>
                     </div>
-
-                    <div class="route-note">
-                        <img src="icons/info.svg" alt="Info" class="info-icon">
-                        <span class="note-text">
-                            Destination will be on the left.
-                        </span>
-                    </div>
                 </div>
             </div>
+            
+            <!-- Start button -->
+            <button class="start-button screen-selector" id="start-button" data-target="navigation-screen">Start</button>
         </div>
-
-        <!-- Start button -->
-        <button class="start-button screen-selector" id="start-button" data-target="navigation-screen">Start</button>
     </div>
 
 

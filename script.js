@@ -108,17 +108,31 @@ const busRoutePolylineOutline2 = L.polyline(pathToStopA.concat(busRoute).concat(
 });
 
 const busRoutePolylineFill = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
-    color: 'blue',       // line color
+    color: '#cfa900ff',       // line color
     weight: 6,           // line thickness
     opacity: 1,        // transparency
     smoothFactor: 1
 });
 
 // Walking route polyline
-const walkingRoutePolyline = L.polyline(walkingRoute, {
-    color: 'green',       // line color
+const walkingRoutePolylineFill = L.polyline(walkingRoute, {
+    color: '#9708c7ff',       // line color
     weight: 6,           // line thickness
     opacity: 1,        // transparency
+    smoothFactor: 1
+});
+
+const walkingRoutePolylineOutline1 = L.polyline(walkingRoute, {
+    color: 'white',       // line color
+    weight: 9,           // line thickness
+    opacity: 0,        // transparency
+    smoothFactor: 1
+});
+
+const walkingRoutePolylineOutline2 = L.polyline(walkingRoute, {
+    color: 'black',       // line color
+    weight: 12,           // line thickness
+    opacity: 0,        // transparency
     smoothFactor: 1
 });
 
@@ -162,8 +176,8 @@ const busStopBMarker = L.marker([49.806855, -97.139393], { icon: busStopIcon });
 
 
 const screenLayers = {
-    'searching-screen': [],
-    'route-selection-screen': [userLocationMarker, pinMarker, walkingETAMarker, busETAMarker, busRoutePolylineOutline1, busRoutePolylineOutline2, busRoutePolylineFill, walkingRoutePolyline],
+    'searching-screen': [userLocationMarker],
+    'route-selection-screen': [userLocationMarker, pinMarker, walkingETAMarker, busETAMarker, walkingRoutePolylineOutline2, walkingRoutePolylineOutline1, walkingRoutePolylineFill, busRoutePolylineOutline1, busRoutePolylineOutline2, busRoutePolylineFill],
     'navigation-screen': [busRouteOutline, busRouteFill, pathToStopAOutline, pathToStopAFill, pathToALCOutline, pathToALCFill, busStopAMarker, busStopBMarker, userLocationMarker, pinMarker]
 };
 
@@ -204,6 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
             showScreen(target);
         });
     });
+
+    // Show the initial screen
+    showScreen('searching-screen');
 });
 
 // ---------------- Leaflet map ----------------
