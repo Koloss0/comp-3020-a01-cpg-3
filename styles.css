@@ -112,6 +112,14 @@ body {
     background-color: #259b1f;
 }
 
+.start-button-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    margin-right: 3px;
+}
+
 .exit-button {
     position: fixed;
     bottom: 40px;
@@ -285,7 +293,7 @@ not try to appear on top of them
 }
 
 .selected-route-card {
-    border: 2px solid #ffcc00; /*#2563eb;*/
+    border: 2px solid #2ab600; /*#2563eb;*/
 }
 
 /* Header row: icon, title, time */
@@ -401,11 +409,11 @@ not try to appear on top of them
 }
 
 .bus-bg-colour {
-    background: #e1b400;
+    background: #2fca00;
 }
 
 .bus-font-colour {
-    color: #c8a000;
+    color: #2ab600;
 }
 
 /* Large route note for sidebar */
