@@ -208,10 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---------------- Leaflet map ----------------
 // 1. Initialize the map and set its view
-const mapCentre = [49.80732, -97.1398]
-
-// old centre location
-//[49.8052, -97.1480]
+const mapCentre = [49.8052, -97.1480]
 
 const bounds = L.latLngBounds(
   [49.7975, -97.1650], // southwest
@@ -229,17 +226,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
- // function to reset the map view
-function resetMap() {
-  map.setView(mapCentre, 16);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const resetButton = document.getElementById('resetMapButton');
-  if (resetButton) {
-    resetButton.addEventListener('click', resetMap);
-  }
-});
 // limit user scrolling distance from campus
 map.setMaxBounds(bounds);
 
