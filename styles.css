@@ -67,7 +67,7 @@ body {
     padding: 8px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    background-color: #4a90e2;
+    background-color: #ceaf00;
     color: white;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -85,7 +85,7 @@ body {
 }
 
 .button-row button:hover {
-    background-color: #357ab8;
+    background-color: #867200;
 }
 
 .start-button {
@@ -494,4 +494,24 @@ not try to appear on top of them
     background-color: #237ade;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-icon {
+  width: 55px;
+  height: 44px;
+  margin-left: -53px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.settings-icon:hover {
+  transform: rotate(20deg);
+  opacity: 1;
 }
