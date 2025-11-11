@@ -326,9 +326,23 @@ not try to appear on top of them
 
 /* Each step */
 .timeline-step {
-    display: flex;
+    display: grid;
     align-items: center;
-    position: relative;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 8px;
+}
+
+.timeline-subtext {
+    font-size: 13px;
+    margin-left: 22px;
+    margin-top: -47px;
+    color: #616161;
+}
+.timeline-subtext-warning {
+    font-size: 13px;
+    margin-left: 22px;
+    margin-top: -28px;
+    color: #616161;
 }
 
 .step-label {
@@ -339,9 +353,42 @@ not try to appear on top of them
 
 .step-label-large {
     font-size: 16px;
+    text-align: left;
     margin-left: 15px;
     color: #444;
 }
+
+/* timeline for the navigation screen on the right 
+step-number is the number itself*/
+.step-number {
+  position: relative;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  display: flex;
+  text-align: right;
+  padding-left: 8px;
+  margin-top: 7px;
+}
+
+/* Vertical connecting line */
+.step-number::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 2px;
+  height: calc(100% + 1.5rem); /* matches .timeline gap */
+  background-color: #1976d2;
+  transform: translateX(-50%);
+}
+
+/* Hide line on last item */
+.timeline-step:last-child .step-number::after {
+  display: none;
+}
+
 
 /* Dot */
 .dot {
@@ -370,7 +417,7 @@ not try to appear on top of them
 
 .connector-large {
     width: 2px;
-    height: 18px;
+    height: 40px;
     background: #2563eb;
     margin-left: 4.5px;
 }

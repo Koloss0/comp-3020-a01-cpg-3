@@ -38,16 +38,16 @@
             </div>
         </div>
     </div>
-    
+
     <!-- ROUTE SELECTION SCREEN -->
     <div class="main" id="route-selection-screen" style="display:none;">
         <div class="sidebar">
-            <div class = "input-wrapper">
-                <img src="icons/current-location.jpeg"  class="location-icon">
+            <div class="input-wrapper">
+                <img src="icons/current-location.jpeg" class="location-icon">
                 <input type="text" class="search-input" placeholder="Current Location" id="searchBarStart">
             </div>
-            <div class = "input-wrapper">
-                <img src="icons/destination.jpeg"  class="location-icon">
+            <div class="input-wrapper">
+                <img src="icons/destination.jpeg" class="location-icon">
                 <input type="text" class="search-input" id="searchBarDestination" placeholder="Active Living Centre">
             </div>
             <div class="sidebar-container">
@@ -153,25 +153,50 @@
             <div class="route-timeline-large">
                 <div class="timeline-step">
                     <div class="dot-large"></div>
-                    <div class="step-label-large">Board shuttle at Stop A</div>
+                    <div class="step-label-large">Walk to SD Lot Stop</div>
+                    <div class="step-number">3:12</div>
                 </div>
 
                 <div class="timeline-step">
                     <div class="connector-large"></div>
+                    <div class="timeline-subtext">1 minute remaining</div>
                 </div>
 
                 <div class="timeline-step">
                     <div class="dot-large"></div>
-                    <div class="step-label-large">Arrive at Stop B</div>
+                    <div class="step-label-large">Wait for Shuttle</div>
+                    <div class="step-number">3:13</div>
                 </div>
 
                 <div class="timeline-step">
                     <div class="connector-large"></div>
+                    <div class="timeline-subtext-warning">wait for 2 minutes<br><span style="color: #b16341;">shuttle arrives in 3 minutes</span></div>
                 </div>
 
                 <div class="timeline-step">
                     <div class="dot-large"></div>
-                    <div class="step-label-large">Walk southeast on University Crescent</div>
+                    <div class="step-label-large">Board Shuttle</div>
+                    <div class="step-number">3:15</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="connector-large"></div>
+                    <div class="timeline-subtext">ride for 6 minutes</div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="dot-large"></div>
+                    <div class="step-label-large">Walk to ALC</div>
+                    <div class="step-number">3:21</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="connector-large"></div>
+                    <div class="timeline-subtext">walk for 2 minutes</div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="dot-large"></div>
+                    <div class="step-label-large">Arrive at ALC</div>
+                    <div class="step-number">3:23</div>
                 </div>
             </div>
 
@@ -184,7 +209,8 @@
         </div>
 
         <!-- Exit button -->
-        <button class="exit-button screen-selector" id="exit-button" data-target="searching-screen">Exit Navigation</button>
+        <button class="exit-button screen-selector" id="exit-button" data-target="searching-screen">Exit
+            Navigation</button>
     </div>
 
     <!-- Map container for Leaflet -->
