@@ -470,3 +470,28 @@ not try to appear on top of them
 .toast.show {
   opacity: 1;
 }
+
+.recenter-button {
+    position: fixed;  
+    bottom: 30px;
+    right: 20px;
+    padding: 10px 15px;  
+    background-color: #4a90e2;
+    border: 2px solid #4a90e2;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1001;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.recenter-button:hover {
+    background-color: #237ade;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}

@@ -240,3 +240,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ---------------- Re-Centre Button ----------------
+const campusCentre = L.latLng(49.807166687784715, -97.13999748229982);
+const campusZoom = 16;
+
+function recenterMap() {
+  const currScreen = SCREENS.find(id => document.getElementById(id).style.display !== 'none');
+
+  switch(currScreen) {
+    case 'searching-screen':
+      map.flyTo(campusCentre, campusZoom);
+      break;
+
+    case 'route-selection-screen':
+      map.flyTo(routeSelectionCenter, 16);
+      break;
+
+    case 'navigation-screen':
+      map.flyTo(userLocation, 18);
+      break;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const recenterButton = document.getElementById('recenter-button');
+
+  if(recenterButton) {
+    recenterButton.addEventListener('click', recenterMap)
+  }
+})
