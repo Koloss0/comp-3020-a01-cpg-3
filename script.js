@@ -42,6 +42,46 @@ const walkingRoute = [
     [49.806371, -97.138765]
 ];
 
+// ---------------- Shuttle Route coordinates ----------------
+// This is the full shuttle route for display on the map.
+const shuttleRoute = [
+  [49.805126, -97.148640],
+  [49.804541, -97.148111],
+  [49.803954, -97.149808],
+  [49.802229, -97.148391],
+  [49.803391, -97.146315],
+  [49.803451, -97.146148],
+  [49.804493, -97.143174],
+  [49.805169, -97.143674],
+  [49.805827, -97.141711],
+  [49.805169, -97.141164],
+  [49.805979, -97.138707],
+  [49.809388, -97.141438],
+  [49.809862, -97.141247],
+  [49.811392, -97.136720],
+  [49.811482, -97.136216],
+  [49.811419, -97.135776],
+  [49.811468, -97.135475],
+  [49.811793, -97.134381],
+  [49.811779, -97.133888],
+  [49.811516, -97.133265],
+  [49.811419, -97.132664],
+  [49.811599, -97.131903],
+  [49.811973, -97.131398],
+  [49.812666, -97.129435],
+  [49.812548, -97.128695],
+  [49.809931, -97.126485],
+  [49.809612, -97.126528],
+  [49.808975, -97.128276],
+  [49.809391, -97.128684],
+  [49.806054, -97.138490],
+  [49.806150, -97.138834],
+  [49.807334, -97.139788],
+  [49.804994, -97.146859],
+  [49.805513, -97.147374],
+  [49.805126, -97.148640]
+];
+
 // ---------------- Polylines ----------------
 // Bus route with outline and fill
 const busRouteOutline = L.polyline(busRoute, {
@@ -136,6 +176,13 @@ const walkingRoutePolylineOutline2 = L.polyline(walkingRoute, {
     smoothFactor: 1
 });
 
+const shuttleRoutePolyline = L.polyline(shuttleRoute, {
+    color: '#4a90e2',       // line color
+    weight: 4,           // line thickness
+    opacity: 0.8,        // transparency
+    smoothFactor: 1
+});
+
 // ---------------- Markers ----------------
 
 const userIcon = L.icon({
@@ -176,7 +223,7 @@ const busStopBMarker = L.marker([49.806855, -97.139393], { icon: busStopIcon });
 
 
 const screenLayers = {
-    'searching-screen': [userLocationMarker],
+    'searching-screen': [userLocationMarker, shuttleRoutePolyline],
     'route-selection-screen': [userLocationMarker, pinMarker, walkingETAMarker, busETAMarker, walkingRoutePolylineOutline2, walkingRoutePolylineOutline1, walkingRoutePolylineFill, busRoutePolylineOutline1, busRoutePolylineOutline2, busRoutePolylineFill],
     'navigation-screen': [busRouteOutline, busRouteFill, pathToStopAOutline, pathToStopAFill, pathToALCOutline, pathToALCFill, busStopAMarker, busStopBMarker, userLocationMarker, pinMarker]
 };
