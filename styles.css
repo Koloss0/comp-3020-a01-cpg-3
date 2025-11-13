@@ -183,7 +183,7 @@ body {
 .sidebar-container-title {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    background-color: #9c25ebff; /*#4a90e2;*/
+    background-color: #4a90e2;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-weight: bold;
@@ -421,7 +421,7 @@ step-number is the number itself*/
     width: 12px;
     height: 12px;
     /*background: #2563eb;*/
-    background: #9c25ebff;
+    background: #4a90e2;
     border-radius: 50%;
     flex-shrink: 0;
 }
@@ -438,7 +438,7 @@ step-number is the number itself*/
 .connector-large {
     width: 2px;
     height: 40px;
-    background: #9c25ebff;
+    background: #4a90e2;
     margin-left: 4.5px;
 }
 
@@ -471,7 +471,7 @@ step-number is the number itself*/
     padding: 6px 8px;
     background: rgba(0, 0, 0, 0.06);
     /*border-left: 4px solid #2563eb;*/
-    border-left: 4px solid #9c25ebff;
+    border-left: 4px solid #4a90e2;
     border-radius: 4px;
     font-size: 15px;
     color: #444;
