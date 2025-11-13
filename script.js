@@ -227,11 +227,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // 1. Initialize the map and set its view
 const mapCentre = [49.8052, -97.1480]
 
-const bounds = L.latLngBounds(
-  [49.7975, -97.1650], // southwest
-  [49.8175, -97.1125]  // northeast
-);
-
 const map = L.map('map', {
     zoomControl: false
 }).setView(mapCentre, 16);
@@ -239,13 +234,9 @@ const map = L.map('map', {
 // 2. Add a tile layer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    minZoom: 13,
+    minZoom: 11,
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
-
-// limit user scrolling distance from campus
-map.setMaxBounds(bounds);
-
 
 // ---------------- Not Implemented Message ----------------
 // Toast to show 'not implemented' message
