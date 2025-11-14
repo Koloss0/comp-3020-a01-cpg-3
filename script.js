@@ -177,7 +177,7 @@ const walkingRoutePolylineOutline2 = L.polyline(walkingRoute, {
 });
 
 const shuttleRoutePolyline = L.polyline(shuttleRoute, {
-    color: '#4a90e2',       // line color
+    color: 'green',       // line color
     weight: 4,           // line thickness
     opacity: 0.8,        // transparency
     smoothFactor: 1
@@ -221,9 +221,15 @@ const busStopIcon = L.icon({
 const busStopAMarker = L.marker([49.805003, -97.148520], { icon: busStopIcon });
 const busStopBMarker = L.marker([49.806855, -97.139393], { icon: busStopIcon });
 
+const shuttleIcon = L.icon({
+    iconUrl: 'markers/shuttle.svg',
+    iconSize: [52, 52], // size of the icon in pixels
+    iconAnchor: [26, 26], // point of the icon which corresponds to the marker's location
+});
+const shuttleMarker = L.marker([49.806899, -97.136020], { icon: shuttleIcon });
 
 const screenLayers = {
-    'searching-screen': [userLocationMarker, shuttleRoutePolyline],
+    'searching-screen': [userLocationMarker, shuttleRoutePolyline, shuttleMarker],
     'route-selection-screen': [userLocationMarker, pinMarker, walkingETAMarker, busETAMarker, walkingRoutePolylineOutline2, walkingRoutePolylineOutline1, walkingRoutePolylineFill, busRoutePolylineOutline1, busRoutePolylineOutline2, busRoutePolylineFill],
     'navigation-screen': [busRouteOutline, busRouteFill, pathToStopAOutline, pathToStopAFill, pathToALCOutline, pathToALCFill, busStopAMarker, busStopBMarker, userLocationMarker, pinMarker]
 };
