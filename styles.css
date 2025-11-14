@@ -102,14 +102,14 @@ body {
     color: white;
     border-radius: 6px;
     border: 1px solid #fff;
-    background-color: #2ed725;
+    background-color: #29af00;
     z-index: 1000;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .start-button:hover {
-    background-color: #259b1f;
+    background-color: #078600;
 }
 
 .start-button-icon {
@@ -293,7 +293,7 @@ not try to appear on top of them
 }
 
 .selected-route-card {
-    border: 2px solid #2ab600; /*#2563eb;*/
+    border: 2px solid #29af00; /*#2563eb;*/
 }
 
 /* Header row: icon, title, time */
@@ -455,11 +455,11 @@ step-number is the number itself*/
 }
 
 .bus-bg-colour {
-    background: #2fca00;
+    background: #29af00;
 }
 
 .bus-font-colour {
-    color: #2ab600;
+    color: #29af00;
 }
 
 /* Large route note for sidebar */
