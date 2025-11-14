@@ -343,3 +343,32 @@ document.addEventListener('DOMContentLoaded', () => {
     recenterButton.addEventListener('click', recenterMap)
   }
 });
+
+// ---------------- Back Button ----------------
+document.querySelector('.back-button').addEventListener('click', function() {
+  const currentScreen = SCREENS.find(id => document.getElementById(id).style.display !== 'none');
+  
+  switch(currentScreen) {
+      case 'route-selection-screen':
+          showScreen('searching-screen');
+          map.flyTo(mapCentre, 16);
+          break;
+      case 'navigation-screen':
+          showScreen('route-selection-screen');
+          break;
+      default:
+          window.history.back();
+  }
+})
+
+// ---------------- Exit Navigation Button ----------------
+document.addEventListener('DOMContentLoaded', () => {
+    const exitButton = document.getElementById('exit-button');
+    
+    if (exitButton) {
+        exitButton.addEventListener('click', function() {
+            // Recenter to the initial landing page view
+            map.flyTo(mapCentre, 16);
+        });
+    }
+});
