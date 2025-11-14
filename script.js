@@ -148,7 +148,7 @@ const busRoutePolylineOutline2 = L.polyline(pathToStopA.concat(busRoute).concat(
 });
 
 const busRoutePolylineFill = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
-    color: '#2bba00ff',       // line color
+    color: '#29af00',       // line color
     weight: 6,           // line thickness
     opacity: 1,        // transparency
     smoothFactor: 1
