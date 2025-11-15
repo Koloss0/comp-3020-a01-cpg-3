@@ -45,6 +45,9 @@ body {
   border: none;
   cursor: pointer;
   padding: 0px;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .search-container input {
