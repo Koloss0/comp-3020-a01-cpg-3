@@ -345,21 +345,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ---------------- Back Button ----------------
-document.querySelector('.back-button').addEventListener('click', function() {
-  const currentScreen = SCREENS.find(id => document.getElementById(id).style.display !== 'none');
-  
-  switch(currentScreen) {
-      case 'route-selection-screen':
-          showScreen('searching-screen');
-          map.flyTo(mapCentre, 16);
-          break;
-      case 'navigation-screen':
-          showScreen('route-selection-screen');
-          break;
-      default:
-          window.history.back();
-  }
-})
+document.addEventListener('DOMContentLoaded', function() {
+    // ---------------- Back Button ----------------
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.back-button')) {
+            const currentScreen = SCREENS.find(id => document.getElementById(id).style.display !== 'none');
+            
+            switch(currentScreen) {
+                case 'route-selection-screen':
+                    showScreen('searching-screen');
+                    map.flyTo(mapCentre, 16);
+                    break;
+                case 'navigation-screen':
+                    showScreen('route-selection-screen');
+                    map.flyTo(userLocation, 16);
+                    break;
+                default:
+                    window.history.back();
+            }
+        }
+    });
+});
 
 // ---------------- Exit Navigation Button ----------------
 document.addEventListener('DOMContentLoaded', () => {
