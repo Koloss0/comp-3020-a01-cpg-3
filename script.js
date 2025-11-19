@@ -225,6 +225,9 @@ const walkingETAIcon = L.icon({
     iconAnchor: [36, 72], // point of the icon which corresponds to the marker's location
 });
 const walkingETAMarker = L.marker([49.806313, -97.143343], { icon: walkingETAIcon });
+walkingETAMarker.on('click', (e) => {
+    selectRoute('walking');
+});
 
 const busETAIcon = L.icon({
     iconUrl: 'markers/bus_eta.svg',
@@ -232,6 +235,9 @@ const busETAIcon = L.icon({
     iconAnchor: [36, 72], // point of the icon which corresponds to the marker's location
 });
 const busETAMarker = L.marker([49.804038, -97.144554], { icon: busETAIcon });
+busETAMarker.on('click', (e) => {
+    selectRoute('shuttle');
+});
 
 const busStopIcon = L.icon({
     iconUrl: 'markers/bus_stop.svg',
