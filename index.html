@@ -45,7 +45,10 @@
     <!-- ROUTE SELECTION SCREEN -->
     <div class="main" id="route-selection-screen" style="display:none;">
         <div class="sidebar">
-            <div class="sidebar-container-title">Plan Your Route</div>
+            <span class="sidebar-container-title">
+                <span class="title-text">Plan Your Route</span>
+                <button class="back-button"><img src="icons/backButton.svg" alt="Back">Back</button>
+            </span>
             <div class="search-container">
                 <input type="text" value="Your Location" readonly not-implemented>
                 <img src="icons/location_searching.svg" alt="Search" class="search-icon">
@@ -65,7 +68,7 @@
 
             <div class="sidebar-container">
                 <div class="sidebar-container-title">Route Descriptions</div>
-                <div not-implemented class="route-card selected-route-card">
+                <div class="route-card" id="shuttle-card" role="button" tabindex="0" aria-pressed="false">
                     <div class="route-header">
                         <img src="icons/shuttle.svg" alt="Shuttle" class="route-icon">
                         <div class="route-title">Shuttle to ALC</div>
@@ -102,7 +105,7 @@
                     </span>
                 </div>
 
-                <div not-implemented class="route-card">
+                <div class="route-card" id="walking-card" role="button" tabindex="0" aria-pressed="false">
                     <div class="route-header">
                         <img src="icons/walk.svg" alt="Walk" class="route-icon">
                         <div class="route-title">Walk to ALC</div>
@@ -139,7 +142,10 @@
     <!-- NAVIGATION SCREEN -->
     <div class="main" id="navigation-screen" style="display:none;">
         <div class="sidebar">
-            <div class="sidebar-container-title">Taking Shuttle to ALC</div>
+            <span class="sidebar-container-title">
+                <span class="title-text">Taking Shuttle to ALC</span>
+                <button class="back-button"><img src="icons/backButton.svg" alt="Back">Back</button>
+            </span>
             <div class="route-timeline-large">
                 <div class="timeline-step">
                     <div class="dot-large"></div>
