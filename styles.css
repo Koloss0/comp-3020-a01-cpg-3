@@ -306,10 +306,34 @@ not try to appear on top of them
     display: flex;
     flex-direction: column;
     gap: 8px;
+    border: 2px solid transparent; /* Invisible at start */
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
 }
 
-.selected-route-card {
-    border: 2px solid #29af00; /*#2563eb;*/
+/* Hover effect */
+.route-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+
+/* Selected visual */
+.route-card.selected {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Individual selected colors */
+#shuttle-card.selected {
+    border-color: #29af00;
+}
+
+#walking-card.selected {
+    border-color: #9c25ebff;
+}
+
+/* Keyboard focus outline */
+.route-card:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 3px;
 }
 
 /* Header row: icon, title, time */
@@ -582,3 +606,16 @@ step-number is the number itself*/
   opacity: 1;
 }
 
+.info-box {
+    background-color: #e6f7ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+    border-left: 4px solid #1890ff;
+}
+
+.info-text {
+    font-size: 0.80rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
