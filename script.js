@@ -301,6 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 1. Initialize the map and set its view
 const mapCentre = [49.8052, -97.1480]
 
+
 const map = L.map('map', {
     zoomControl: false
 }).setView(mapCentre, 16);
@@ -311,6 +312,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     minZoom: 11,
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
+
+L.control.zoom({
+  position: 'bottomright'
+}).addTo(map)
 
 // ---------------- Not Implemented Message ----------------
 // Toast to show 'not implemented' message
@@ -336,7 +341,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ---------------- Re-Centre Button ----------------
-const campusCentre = L.latLng(49.807166687784715, -97.13999748229982);
 const campusZoom = 16;
 
 function recenterMap() {
@@ -344,7 +348,7 @@ function recenterMap() {
 
   switch(currScreen) {
     case 'searching-screen':
-      map.flyTo(campusCentre, campusZoom);
+      map.flyTo(userLocation, campusZoom);
       break;
 
     case 'route-selection-screen':
