@@ -99,19 +99,36 @@ const busRouteFill = L.polyline(busRoute, {
   smoothFactor: 1
 });
 
+// Bus route polyline
+const busRoutePolylineFill = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
+    color: '#29af00',       // line color
+    weight: 6,           // line thickness
+    opacity: 1,        // transparency
+    smoothFactor: 1
+});
+busRoutePolylineFill.on('click', (e) => {
+    selectRoute("shuttle");
+});
+
 const busRoutePolylineOutline1 = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
     color: 'black',       // line color
     weight: 16,           // line thickness
     opacity: 1,        // transparency
     smoothFactor: 1
-  });
+});
+busRoutePolylineOutline1.on('click', (e) => {
+    selectRoute("shuttle");
+});
 
-  const busRoutePolylineOutline2 = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
+const busRoutePolylineOutline2 = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
     color: 'white',       // line color
     weight: 11,           // line thickness
     opacity: 1,        // transparency
     smoothFactor: 1
-  });
+});
+busRoutePolylineOutline2.on('click', (e) => {
+    selectRoute("shuttle");
+});
 
 // Path to Stop A with outline and fill (dashed)
 const pathToStopAOutline = L.polyline(pathToStopA, {
@@ -147,14 +164,6 @@ const pathToALCFill = L.polyline(pathToALC, {
   dashArray: '8, 16'
 });
 
-// Bus route polyline
-const busRoutePolylineFill = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
-    color: '#29af00',       // line color
-    weight: 6,           // line thickness
-    opacity: 1,        // transparency
-    smoothFactor: 1
-});
-
 // Walking route polyline
 const walkingRoutePolylineFill = L.polyline(walkingRoute, {
     color: '#9708c7ff',       // line color
@@ -175,6 +184,16 @@ const walkingRoutePolylineOutline2 = L.polyline(walkingRoute, {
     weight: 16,           // line thickness
     opacity: 0,        // transparency
     smoothFactor: 1
+});
+
+walkingRoutePolylineFill.on('click', (e) => {
+    selectRoute("walking");
+});
+walkingRoutePolylineOutline1.on('click', (e) => {
+    selectRoute("walking");
+});
+walkingRoutePolylineOutline2.on('click', (e) => {
+    selectRoute("walking");
 });
 
 const shuttleRoutePolyline = L.polyline(shuttleRoute, {
