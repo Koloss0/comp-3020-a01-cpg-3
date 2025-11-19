@@ -540,7 +540,7 @@ step-number is the number itself*/
 .recenter-button {
     position: fixed;  
     bottom: 30px;
-    right: 20px;
+    right: 50px;
     padding: 10px 15px;  
     background-color: #4a90e2;
     border: 2px solid #4a90e2;
