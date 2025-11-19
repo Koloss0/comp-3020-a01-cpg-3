@@ -250,9 +250,8 @@ const shuttleMarker = L.marker([49.806899, -97.136020], { icon: shuttleIcon });
 
 const screenLayers = {
     'searching-screen': [userLocationMarker, shuttleRoutePolyline, shuttleMarker],
-    'route-selection-screen': [userLocationMarker, pinMarker, walkingETAMarker, busETAMarker, walkingRoutePolylineOutline2, walkingRoutePolylineOutline1, walkingRoutePolylineFill,  busRoutePolylineOutline1,
-    busRoutePolylineOutline2, busRoutePolylineFill],
-    'navigation-screen': [busRouteOutline, busRouteFill, pathToStopAOutline, pathToStopAFill, pathToALCOutline, pathToALCFill, busStopAMarker, busStopBMarker, userLocationMarker, pinMarker]
+    'route-selection-screen': [shuttleMarker, shuttleRoutePolyline, userLocationMarker, pinMarker, walkingETAMarker, busETAMarker, walkingRoutePolylineOutline2, walkingRoutePolylineOutline1, walkingRoutePolylineFill, busRoutePolylineOutline1, busRoutePolylineOutline2, busRoutePolylineFill],
+    'navigation-screen': [shuttleMarker, shuttleRoutePolyline, busRouteOutline, busRouteFill, pathToStopAOutline, pathToStopAFill, pathToALCOutline, pathToALCFill, busStopAMarker, busStopBMarker, userLocationMarker, pinMarker]
 };
 
 // ---------------- Switching Screens ----------------
@@ -335,6 +334,17 @@ document.addEventListener('DOMContentLoaded', () => {
   unimplemented.forEach(e => {
     e.addEventListener('click', event => {
       event.preventDefault();
+      showNotImplementedMessage("Feature not implemented.");
+    });
+  });
+});
+
+// allows button to be clicked but still displays "Feature not implemented"
+document.addEventListener('DOMContentLoaded', () => {
+  const unimplemented = document.querySelectorAll('[not-implemented2]');
+
+  unimplemented.forEach(e => {
+    e.addEventListener('click', event => {
       showNotImplementedMessage("Feature not implemented.");
     });
   });
