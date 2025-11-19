@@ -83,6 +83,7 @@ const shuttleRoute = [
 ];
 
 // ---------------- Polylines ----------------
+
 // Bus route with outline and fill
 const busRouteOutline = L.polyline(busRoute, {
   color: 'blue',       // line color
@@ -96,6 +97,37 @@ const busRouteFill = L.polyline(busRoute, {
   weight: 4,           // line thickness
   opacity: 0.8,        // transparency
   smoothFactor: 1
+});
+
+// Bus route polyline
+const busRoutePolylineFill = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
+    color: '#29af00',       // line color
+    weight: 6,           // line thickness
+    opacity: 1,        // transparency
+    smoothFactor: 1
+});
+busRoutePolylineFill.on('click', (e) => {
+    selectRoute("shuttle");
+});
+
+const busRoutePolylineOutline1 = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
+    color: 'black',       // line color
+    weight: 16,           // line thickness
+    opacity: 1,        // transparency
+    smoothFactor: 1
+});
+busRoutePolylineOutline1.on('click', (e) => {
+    selectRoute("shuttle");
+});
+
+const busRoutePolylineOutline2 = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
+    color: 'white',       // line color
+    weight: 11,           // line thickness
+    opacity: 1,        // transparency
+    smoothFactor: 1
+});
+busRoutePolylineOutline2.on('click', (e) => {
+    selectRoute("shuttle");
 });
 
 // Path to Stop A with outline and fill (dashed)
@@ -132,28 +164,6 @@ const pathToALCFill = L.polyline(pathToALC, {
   dashArray: '8, 16'
 });
 
-// Bus route polyline
-const busRoutePolylineOutline1 = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
-    color: 'black',       // line color
-    weight: 16,           // line thickness
-    opacity: 1,        // transparency
-    smoothFactor: 1
-});
-
-const busRoutePolylineOutline2 = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
-    color: 'white',       // line color
-    weight: 11,           // line thickness
-    opacity: 1,        // transparency
-    smoothFactor: 1
-});
-
-const busRoutePolylineFill = L.polyline(pathToStopA.concat(busRoute).concat(pathToALC), {
-    color: '#29af00',       // line color
-    weight: 6,           // line thickness
-    opacity: 1,        // transparency
-    smoothFactor: 1
-});
-
 // Walking route polyline
 const walkingRoutePolylineFill = L.polyline(walkingRoute, {
     color: '#9708c7ff',       // line color
@@ -163,17 +173,27 @@ const walkingRoutePolylineFill = L.polyline(walkingRoute, {
 });
 
 const walkingRoutePolylineOutline1 = L.polyline(walkingRoute, {
-    color: 'white',       // line color
-    weight: 9,           // line thickness
+   color: 'white',       // line color
+    weight: 11,           // line thickness
     opacity: 0,        // transparency
     smoothFactor: 1
 });
 
 const walkingRoutePolylineOutline2 = L.polyline(walkingRoute, {
     color: 'black',       // line color
-    weight: 12,           // line thickness
+    weight: 16,           // line thickness
     opacity: 0,        // transparency
     smoothFactor: 1
+});
+
+walkingRoutePolylineFill.on('click', (e) => {
+    selectRoute("walking");
+});
+walkingRoutePolylineOutline1.on('click', (e) => {
+    selectRoute("walking");
+});
+walkingRoutePolylineOutline2.on('click', (e) => {
+    selectRoute("walking");
 });
 
 const shuttleRoutePolyline = L.polyline(shuttleRoute, {
@@ -388,4 +408,82 @@ document.addEventListener('DOMContentLoaded', () => {
             map.flyTo(mapCentre, 16);
         });
     }
+});
+
+// ---------------- Route Selection Logic ----------------
+const shuttlePolylines = [
+    busRoutePolylineOutline1,
+    busRoutePolylineOutline2,
+    busRoutePolylineFill
+];
+
+const walkingPolylines = [
+    walkingRoutePolylineOutline1,
+    walkingRoutePolylineOutline2,
+    walkingRoutePolylineFill
+];
+
+let selectedRoute = "shuttle";
+
+function showRoute(polylines) {
+    polylines.forEach(pl => {
+        if (!map.hasLayer(pl)) {
+            map.addLayer(pl);
+        }
+    });
+}
+
+function hideRoute(polylines) {
+    polylines.forEach(pl => {
+        if (map.hasLayer(pl)) {
+            map.removeLayer(pl);
+        }
+    });
+}
+
+function selectRoute(route) {
+    selectedRoute = route;
+
+    const shuttleCard = document.getElementById("shuttle-card");
+    const walkingCard = document.getElementById("walking-card");
+
+    if (route === "shuttle") {
+        shuttleCard.classList.add("selected");
+        walkingCard.classList.remove("selected");
+        
+        busRoutePolylineOutline1.setStyle({ opacity: 1 });
+        busRoutePolylineOutline2.setStyle({ opacity: 1 });
+        
+        walkingRoutePolylineOutline1.setStyle({ opacity: 0 });
+        walkingRoutePolylineOutline2.setStyle({ opacity: 0 });
+    } else {
+        walkingCard.classList.add("selected");
+        shuttleCard.classList.remove("selected");
+        
+        busRoutePolylineOutline1.setStyle({ opacity: 0 });
+        busRoutePolylineOutline2.setStyle({ opacity: 0 });
+
+        walkingRoutePolylineOutline1.setStyle({ opacity: 1 });
+        walkingRoutePolylineOutline2.setStyle({ opacity: 1 });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const shuttleCard = document.getElementById("shuttle-card");
+    const walkingCard = document.getElementById("walking-card");
+    const startButton = document.getElementById("start-button");
+
+    shuttleCard.classList.add("selected");
+
+    shuttleCard.addEventListener("click", () => selectRoute("shuttle"));
+    walkingCard.addEventListener("click", () => selectRoute("walking"));
+
+   startButton.addEventListener("click", (e) => {
+        if (selectedRoute !== "shuttle") {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            showNotImplementedMessage("Navigation feature is only available for the shuttle route.");
+        }
+    }, true); 
 });
