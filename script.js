@@ -197,10 +197,11 @@ walkingRoutePolylineOutline2.on('click', (e) => {
 });
 
 const shuttleRoutePolyline = L.polyline(shuttleRoute, {
-    color: 'green',       // line color
+    color: '#227708ff',       // line color
     weight: 4,           // line thickness
     opacity: 0.8,        // transparency
-    smoothFactor: 1
+    smoothFactor: 1,
+    dashArray: '10, 10, 20, 10'
 });
 
 // ---------------- Markers ----------------
