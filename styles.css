@@ -386,6 +386,16 @@ not try to appear on top of them
     align-items: center;
     grid-template-columns: auto 1fr auto;
     column-gap: 8px;
+    padding: 0px 8px;
+}
+.timeline-step-current {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 8px;
+    background-color: #e3f3fe;
+    padding: 0px 8px;
+    border-radius: 6px; 
 }
 
 .timeline-subtext {
@@ -393,6 +403,12 @@ not try to appear on top of them
     margin-left: 22px;
     margin-top: -47px;
     color: #616161;
+}
+.timeline-subtext-current {
+    font-size: 13px;
+    margin-left: 22px;
+    margin-top: -30px;
+    color: black;
 }
 
 .timeline-subtext-warning {
@@ -427,18 +443,39 @@ step-number is the number itself*/
     display: flex;
     text-align: right;
     padding-left: 8px;
-    margin-top: 7px;
+    margin-top: 12px;
+}
+.step-number-current {
+    position: relative;
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    text-align: right;
+    padding-left: 8px;
+    margin-top: 12px;
 }
 
 /* Vertical connecting line */
 .step-number::after {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 35px;
     left: 50%;
     width: 2px;
-    height: calc(100% + 1.5rem);
-    /* matches .timeline gap */
+    height: 45px;
+    background-color: #1976d2;
+    transform: translateX(-50%);
+}
+.step-number-current::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    margin-bottom: 10px;
+    left: 50%;
+    width: 2px;
+    height: 40px;
     background-color: #1976d2;
     transform: translateX(-50%);
 }
@@ -463,7 +500,15 @@ step-number is the number itself*/
     width: 12px;
     height: 12px;
     /*background: #2563eb;*/
-    background: #4a90e2;
+    background: #1976d2;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.dot-large-current {
+    width: 12px;
+    height: 12px;
+    /*background: #2563eb;*/
+    background: #1976d2;
     border-radius: 50%;
     flex-shrink: 0;
 }
@@ -475,6 +520,7 @@ step-number is the number itself*/
     /*background: #2563eb;*/
     background: #9c25ebff;
     margin-left: 3px;
+    /* margin-top: 40px; */
 }
 
 .connector-large {
@@ -482,6 +528,13 @@ step-number is the number itself*/
     height: 40px;
     background: #1976d2;
     margin-left: 4.5px;
+}
+.connector-large-current {
+    width: 3px;
+    height: 40px;
+    background: #1976d2;
+    margin-left: 4.5px;
+    margin-bottom: 12px;
 }
 
 .route-card-note {
