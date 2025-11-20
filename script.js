@@ -312,11 +312,12 @@ const map = L.map('map', {
 }).setView(mapCentre, 16);
 
 // 2. Add a tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     maxZoom: 19,
     minZoom: 11,
-    attribution: '© OpenStreetMap contributors'
+    attribution: '© OpenStreetMap contributors, Humanitarian OpenStreetMap Team'
 }).addTo(map);
+
 
 L.control.zoom({
   position: 'bottomright'
