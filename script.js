@@ -455,12 +455,17 @@ function hideRoute(polylines) {
 function selectRoute(route) {
     selectedRoute = route;
 
+    const startButton = document.getElementById("start-button");
     const shuttleCard = document.getElementById("shuttle-card");
     const walkingCard = document.getElementById("walking-card");
+    const startButtonIcon = document.getElementById("start-button-icon");
 
     if (route === "shuttle") {
         shuttleCard.classList.add("selected");
         walkingCard.classList.remove("selected");
+        startButton.classList.remove("walking-selected");
+
+        startButtonIcon.setAttribute('src', 'icons/shuttle-white.svg');
         
         busRoutePolylineOutline1.setStyle({ opacity: 1 });
         busRoutePolylineOutline2.setStyle({ opacity: 1 });
@@ -470,13 +475,16 @@ function selectRoute(route) {
     } else {
         walkingCard.classList.add("selected");
         shuttleCard.classList.remove("selected");
+        startButton.classList.add("walking-selected");
         
+        startButtonIcon.setAttribute('src', 'icons/walk-white.svg');
+
         busRoutePolylineOutline1.setStyle({ opacity: 0 });
         busRoutePolylineOutline2.setStyle({ opacity: 0 });
 
         walkingRoutePolylineOutline1.setStyle({ opacity: 1 });
         walkingRoutePolylineOutline2.setStyle({ opacity: 1 });
-    }
+    } 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
