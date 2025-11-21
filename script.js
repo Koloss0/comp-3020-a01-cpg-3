@@ -86,16 +86,16 @@ const shuttleRoute = [
 
 // Bus route with outline and fill
 const busRouteOutline = L.polyline(busRoute, {
-  color: 'blue',       // line color
-  weight: 8,           // line thickness
-  opacity: 0.8,        // transparency
+  color: '#000000ff',       // line color
+  weight: 12,           // line thickness
+  opacity: 1,        // transparency
   smoothFactor: 1
 });
 
 const busRouteFill = L.polyline(busRoute, {
-  color: 'white',       // line color
-  weight: 4,           // line thickness
-  opacity: 0.8,        // transparency
+  color: '#95ff75ff',       // line color
+  weight: 6,           // line thickness
+  opacity: 1,        // transparency
   smoothFactor: 1
 });
 
@@ -133,7 +133,7 @@ busRoutePolylineOutline2.on('click', (e) => {
 // Path to Stop A with outline and fill (dashed)
 const pathToStopAOutline = L.polyline(pathToStopA, {
   color: 'black',       // line color
-  weight: 8,           // line thickness
+  weight: 12,           // line thickness
   opacity: 1,        // transparency
   smoothFactor: 1,
   dashArray: '8, 16'
@@ -141,7 +141,7 @@ const pathToStopAOutline = L.polyline(pathToStopA, {
 
 const pathToStopAFill = L.polyline(pathToStopA, {
   color: 'white',       // line color
-  weight: 4,           // line thickness
+  weight: 6,           // line thickness
   opacity: 1,        // transparency
   smoothFactor: 1,
   dashArray: '8, 16'
@@ -197,11 +197,11 @@ walkingRoutePolylineOutline2.on('click', (e) => {
 });
 
 const shuttleRoutePolyline = L.polyline(shuttleRoute, {
-    color: '#227708ff',       // line color
+    color: '#1b5b07ff',       // line color
     weight: 4,           // line thickness
-    opacity: 0.8,        // transparency
+    opacity: 0.9,        // transparency
     smoothFactor: 1,
-    dashArray: '10, 10, 20, 10'
+    dashArray: '1, 11, 15, 11'
 });
 
 // ---------------- Markers ----------------
