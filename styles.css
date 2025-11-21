@@ -124,10 +124,19 @@ body {
     z-index: 1000;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.25s ease;
 }
 
 .start-button:hover {
     background-color: #078600;
+}
+
+.start-button.walking-selected {
+    background-color: #9c25ebff;
+}
+
+.start-button.walking-selected:hover {
+    background-color: rgb(116, 19, 181);
 }
 
 .start-button-icon {

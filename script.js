@@ -86,16 +86,16 @@ const shuttleRoute = [
 
 // Bus route with outline and fill
 const busRouteOutline = L.polyline(busRoute, {
-  color: 'blue',       // line color
-  weight: 8,           // line thickness
-  opacity: 0.8,        // transparency
+  color: '#000000ff',       // line color
+  weight: 12,           // line thickness
+  opacity: 1,        // transparency
   smoothFactor: 1
 });
 
 const busRouteFill = L.polyline(busRoute, {
-  color: 'white',       // line color
-  weight: 4,           // line thickness
-  opacity: 0.8,        // transparency
+  color: '#95ff75ff',       // line color
+  weight: 6,           // line thickness
+  opacity: 1,        // transparency
   smoothFactor: 1
 });
 
@@ -133,7 +133,7 @@ busRoutePolylineOutline2.on('click', (e) => {
 // Path to Stop A with outline and fill (dashed)
 const pathToStopAOutline = L.polyline(pathToStopA, {
   color: 'black',       // line color
-  weight: 8,           // line thickness
+  weight: 12,           // line thickness
   opacity: 1,        // transparency
   smoothFactor: 1,
   dashArray: '8, 16'
@@ -141,7 +141,7 @@ const pathToStopAOutline = L.polyline(pathToStopA, {
 
 const pathToStopAFill = L.polyline(pathToStopA, {
   color: 'white',       // line color
-  weight: 4,           // line thickness
+  weight: 6,           // line thickness
   opacity: 1,        // transparency
   smoothFactor: 1,
   dashArray: '8, 16'
@@ -197,10 +197,11 @@ walkingRoutePolylineOutline2.on('click', (e) => {
 });
 
 const shuttleRoutePolyline = L.polyline(shuttleRoute, {
-    color: 'green',       // line color
+    color: '#1b5b07ff',       // line color
     weight: 4,           // line thickness
-    opacity: 0.8,        // transparency
-    smoothFactor: 1
+    opacity: 0.9,        // transparency
+    smoothFactor: 1,
+    dashArray: '1, 11, 15, 11'
 });
 
 // ---------------- Markers ----------------
@@ -455,12 +456,17 @@ function hideRoute(polylines) {
 function selectRoute(route) {
     selectedRoute = route;
 
+    const startButton = document.getElementById("start-button");
     const shuttleCard = document.getElementById("shuttle-card");
     const walkingCard = document.getElementById("walking-card");
+    const startButtonIcon = document.getElementById("start-button-icon");
 
     if (route === "shuttle") {
         shuttleCard.classList.add("selected");
         walkingCard.classList.remove("selected");
+        startButton.classList.remove("walking-selected");
+
+        startButtonIcon.setAttribute('src', 'icons/shuttle-white.svg');
         
         busRoutePolylineOutline1.setStyle({ opacity: 1 });
         busRoutePolylineOutline2.setStyle({ opacity: 1 });
@@ -470,13 +476,16 @@ function selectRoute(route) {
     } else {
         walkingCard.classList.add("selected");
         shuttleCard.classList.remove("selected");
+        startButton.classList.add("walking-selected");
         
+        startButtonIcon.setAttribute('src', 'icons/walk-white.svg');
+
         busRoutePolylineOutline1.setStyle({ opacity: 0 });
         busRoutePolylineOutline2.setStyle({ opacity: 0 });
 
         walkingRoutePolylineOutline1.setStyle({ opacity: 1 });
         walkingRoutePolylineOutline2.setStyle({ opacity: 1 });
-    }
+    } 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
